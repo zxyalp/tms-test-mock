@@ -46,3 +46,16 @@ pagehelper:
   reasonable: true
   support-methods-arguments: true
   params: count=countSql
+
+# dubbo相关配置
+dubbo:
+  application:
+    name: tms-dev-dubbo-provider
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    protocol: zookeeper
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.hello.tms.dev.provide.service
